@@ -21,10 +21,10 @@ namespace TinyValidator.Abstractions
         /// Check if the value is valid in its case
         /// </summary>
         /// <returns>True if the rule is respected; false otherwise</returns>
-        protected abstract bool IsValid(T value);
+        protected abstract bool IsValidWhen(T value);
 
         /// <summary>
-        /// Logic to be executed if <see cref="Rule{T}.IsValid"/> fails
+        /// Logic to be executed if <see cref="IsValidWhen"/> fails
         /// </summary>
         protected abstract void OnInvalid();
 
@@ -34,7 +34,7 @@ namespace TinyValidator.Abstractions
         /// <param name="value">Value to be validated</param>
         public void Validate(T value)
         {
-            if (!IsValid(value))
+            if (!IsValidWhen(value))
             {
                 OnInvalid();
             }
