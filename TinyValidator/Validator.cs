@@ -10,7 +10,6 @@
  */
 
 using System.Collections.Generic;
-using System.Linq;
 using TinyValidator.Abstractions;
 
 namespace TinyValidator
@@ -38,7 +37,7 @@ namespace TinyValidator
         /// <param name="rules">Rules to be validated</param>
         /// <returns>A new instance of <see cref="Validator{T}"/></returns>
         public static Validator<T> CreateValidationPipelineWith(params Rule<T>[] rules)
-            => new Validator<T>(rules.ToList());
+            => new Validator<T>(rules);
 
         /// <summary>
         /// Create a new validator with a set of rules to be executed in the
@@ -55,8 +54,11 @@ namespace TinyValidator
 
         /// <inheritdoc cref="IValidator{T}.Validate"/>
         public void Validate(T value)
-            => Rules.ToList()
-                .ForEach(rule =>
-                    rule.Validate(value));
+        {
+            foreach (var rule in Rules)
+            {
+                rule.Validate(value);
+            }
+        }
     }
 }
