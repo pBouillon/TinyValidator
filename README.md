@@ -4,7 +4,7 @@
 |:---------|:-------|
 | Package |  |
 | Code Quality  | [![CodeFactor](https://www.codefactor.io/repository/github/pbouillon/tinyvalidator/badge)](https://www.codefactor.io/repository/github/pbouillon/tinyvalidator) |
-| CI / CD |  |
+| CI / CD | ![Build](https://github.com/pBouillon/TinyValidator/workflows/Build/badge.svg) |
 
 TinyValidator is a tiny and easily customizable validation framework built in .NET Standard 2.0
 
