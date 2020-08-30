@@ -49,22 +49,20 @@ public class MustNotBeDead : Rule<Person>
 And from then, creating your generator to validate your instances
 
 ```csharp
-private readonly IValidator<Person> _validator =
-    Validator<Person>.CreateValidationPipelineWith(
+// Create the validator from a custom pipeline
+var validator = Validator<Person>.CreateValidationPipelineWith(
         new MustBeAdult(),
         new MustNotBeDead());
 
-void OperateOnPerson(Person person)
-{
-    _validator.Validate(person);
-
-    // The rest of your logic goes here
-}
+// Validate your instance
+_validator.Validate(person);
 ```
 
 When calling `.Validate` on your instance, each custom `Rule` will be checked in the same order as at the `Validator` creation.
 
 If any fails, `.OnInvalid` will be called for the failing rule.
+
+> You may also want to create your `Validator` as a class member to make your code a bit less verbose and avoid its creation each time you perform a validation
 
 ### Built-in validators
 
