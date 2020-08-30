@@ -28,7 +28,7 @@ namespace TinyValidator
         /// Create a new validator with its set of rules
         /// </summary>
         /// <param name="rules">Rules to be validated</param>
-        private Validator(params Rule<T>[] rules)
+        private Validator(IEnumerable<Rule<T>> rules)
             => Rules = rules;
 
         /// <summary>
@@ -38,7 +38,20 @@ namespace TinyValidator
         /// <param name="rules">Rules to be validated</param>
         /// <returns>A new instance of <see cref="Validator{T}"/></returns>
         public static Validator<T> CreateValidationPipelineWith(params Rule<T>[] rules)
+            => new Validator<T>(rules.ToList());
+
+        /// <summary>
+        /// Create a new validator with a set of rules to be executed in the
+        /// provided order
+        /// </summary>
+        /// <param name="rules">Rules to be validated</param>
+        /// <returns>A new instance of <see cref="Validator{T}"/></returns>
+        public static Validator<T> CreateValidationPipelineWith(IEnumerable<Rule<T>> rules)
             => new Validator<T>(rules);
+
+        /// <inheritdoc cref="IValidator{T}.Clone"/>
+        public IValidator<T> Clone()
+            => CreateValidationPipelineWith(Rules);
 
         /// <inheritdoc cref="IValidator{T}.Validate"/>
         public void Validate(T value)

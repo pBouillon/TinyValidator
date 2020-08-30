@@ -25,6 +25,12 @@ namespace TinyValidator.Abstractions
         IEnumerable<Rule<T>> Rules { get; }
 
         /// <summary>
+        /// Clone the current instance of the <see cref="IValidator{T}"/>
+        /// </summary>
+        /// <returns>A clone of the instance, holding the same <see cref="Rules"/></returns>
+        IValidator<T> Clone();
+
+        /// <summary>
         /// Effective call to validate each of the previously provided rules
         /// </summary>
         /// <param name="value">Value to be validated</param>
