@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyValidator", "TinyValida
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyValidator.Abstractions", "TinyValidator.Abstractions\TinyValidator.Abstractions.csproj", "{94876C68-C5EB-410C-B0F0-4564E731437A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyValidator.UnitTests", "TinyValidator.UnitTests\TinyValidator.UnitTests.csproj", "{A5441393-83B4-49E8-9208-5B58BD7FF644}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,18 @@ Global
 		{94876C68-C5EB-410C-B0F0-4564E731437A}.Release|x64.Build.0 = Release|Any CPU
 		{94876C68-C5EB-410C-B0F0-4564E731437A}.Release|x86.ActiveCfg = Release|Any CPU
 		{94876C68-C5EB-410C-B0F0-4564E731437A}.Release|x86.Build.0 = Release|Any CPU
+		{A5441393-83B4-49E8-9208-5B58BD7FF644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5441393-83B4-49E8-9208-5B58BD7FF644}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5441393-83B4-49E8-9208-5B58BD7FF644}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A5441393-83B4-49E8-9208-5B58BD7FF644}.Debug|x64.Build.0 = Debug|Any CPU
+		{A5441393-83B4-49E8-9208-5B58BD7FF644}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A5441393-83B4-49E8-9208-5B58BD7FF644}.Debug|x86.Build.0 = Debug|Any CPU
+		{A5441393-83B4-49E8-9208-5B58BD7FF644}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5441393-83B4-49E8-9208-5B58BD7FF644}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5441393-83B4-49E8-9208-5B58BD7FF644}.Release|x64.ActiveCfg = Release|Any CPU
+		{A5441393-83B4-49E8-9208-5B58BD7FF644}.Release|x64.Build.0 = Release|Any CPU
+		{A5441393-83B4-49E8-9208-5B58BD7FF644}.Release|x86.ActiveCfg = Release|Any CPU
+		{A5441393-83B4-49E8-9208-5B58BD7FF644}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

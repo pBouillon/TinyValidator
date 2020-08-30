@@ -45,12 +45,12 @@ namespace TinyValidator
         /// </summary>
         /// <param name="rules">Rules to be validated</param>
         /// <returns>A new instance of <see cref="Validator{T}"/></returns>
-        public static Validator<T> CreateValidationPipelineWith(IEnumerable<Rule<T>> rules)
+        public static Validator<T> FromValidationPipeline(IEnumerable<Rule<T>> rules)
             => new Validator<T>(rules);
 
         /// <inheritdoc cref="IValidator{T}.Clone"/>
         public IValidator<T> Clone()
-            => CreateValidationPipelineWith(Rules);
+            => FromValidationPipeline(Rules);
 
         /// <inheritdoc cref="IValidator{T}.Validate"/>
         public void Validate(T value)

@@ -5,3 +5,6 @@
 # Compilation results
 obj/
 bin/
+
+# Others
+*.user
