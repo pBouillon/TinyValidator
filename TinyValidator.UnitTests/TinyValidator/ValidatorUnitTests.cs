@@ -1,12 +1,4 @@
-﻿using AutoFixture;
-using FluentAssertions;
-using System;
-using System.Linq;
-using TinyValidator.Exceptions;
-using TinyValidator.UnitTests.Common;
-using Xunit;
-
-/*
+﻿/*
  * Author
  *      Pierre Bouillon - https://github.com/pBouillon
  *
@@ -16,6 +8,14 @@ using Xunit;
  * License
  *      MIT - https://github.com/pBouillon/TinyValidator/blob/master/LICENSE
  */
+
+using AutoFixture;
+using FluentAssertions;
+using System;
+using System.Linq;
+using TinyValidator.Exceptions;
+using TinyValidator.UnitTests.Common;
+using Xunit;
 
 namespace TinyValidator.UnitTests.TinyValidator
 {
