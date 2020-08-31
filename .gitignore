@@ -1,0 +1,10 @@
+# Editors
+.vs/
+.vscode/
+
+# Compilation results
+obj/
+bin/
+
+# Others
+*.user

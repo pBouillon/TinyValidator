@@ -1,0 +1,26 @@
+name: NuGet package
+
+on:
+  check_suite:
+    types: completed
+  push:
+    branches:
+      - release-*
+
+jobs:
+  publish:
+    name: push on nuget
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '3.1.x'
+
+      - name: publish on nuget
+        run: |
+          dotnet pack --configuration Release
+          dotnet nuget push TinyValidator.Abstractions/bin/Release/TinyValidator.Abstractions.1.0.0.nupkg -k ${{ secrets.NugetApiKey }} -s https://api.nuget.org/v3/index.json
+          dotnet nuget push TinyValidator/bin/Release/TinyValidator.1.0.0.nupkg -k ${{ secrets.NugetApiKey }} -s https://api.nuget.org/v3/index.json
