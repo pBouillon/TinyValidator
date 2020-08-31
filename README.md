@@ -2,7 +2,7 @@
 
 | Category | Status |
 |:---------|:-------|
-| Package |  |
+| Package | <!-- [![NuGet Badge](https://buildstats.info/nuget/TinyValidator)](https://www.nuget.org/packages/TinyValidator/) --> *Badge in progress !* |
 | Code Quality  | [![CodeFactor](https://www.codefactor.io/repository/github/pbouillon/tinyvalidator/badge)](https://www.codefactor.io/repository/github/pbouillon/tinyvalidator) |
 | CI / CD | ![Build](https://github.com/pBouillon/TinyValidator/workflows/Build/badge.svg) |
 
@@ -11,8 +11,6 @@ TinyValidator is a lightweight and framework-agnostic .NET validation library
 ## Overview
 
 Given a custom type, struct or class, you can easily create your own rule set and generate validation pipeline from them to validate any instance of the desired entity.
-
-### Example
 
 Assuming you have to validate a business class which is a `Person`:
 
@@ -72,14 +70,17 @@ If you can't find the rule you are looking for, you are free to add yours !
 
 > For simple validations with no reference to a business rule, you may want to check [LiteGuard](https://github.com/adamralph/liteguard)
 
-
 ## Installation
 
-*In Progress*
+You can [download the NuGet package](https://www.nuget.org/packages/TinyValidator/) directly in your project with the .NET CLI:
+
+```plain
+> dotnet add package TinyValidator
+```
 
 ## Documentation
 
-*In Progress*
+A more detailed documentation is available in the [project's wiki](https://github.com/pBouillon/TinyValidator/wiki) !
 
 ## Contributing
 
