@@ -36,7 +36,7 @@ namespace TinyValidator
         /// </summary>
         /// <param name="rules">Rules to be validated</param>
         /// <returns>A new instance of <see cref="Validator{T}"/></returns>
-        public static Validator<T> CreateValidationPipelineWith(params Rule<T>[] rules)
+        public static Validator<T> FromValidationPipeline(params Rule<T>[] rules)
             => new Validator<T>(rules);
 
         /// <summary>

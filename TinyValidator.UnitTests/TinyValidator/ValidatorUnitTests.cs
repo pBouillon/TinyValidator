@@ -57,7 +57,7 @@ namespace TinyValidator.UnitTests.TinyValidator
         {
             // Arrange
             const bool value = true;
-            var validator = Validator<bool>.CreateValidationPipelineWith(
+            var validator = Validator<bool>.FromValidationPipeline(
                 new DummyRule());
 
             // Act
@@ -78,7 +78,7 @@ namespace TinyValidator.UnitTests.TinyValidator
         {
             // Arrange
             const bool value = false;
-            var validator = Validator<bool>.CreateValidationPipelineWith(
+            var validator = Validator<bool>.FromValidationPipeline(
                 new DummyRule());
 
             // Act
