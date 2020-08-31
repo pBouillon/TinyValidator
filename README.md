@@ -2,7 +2,7 @@
 
 | Category | Status |
 |:---------|:-------|
-| Package | <!-- [![NuGet Badge](https://buildstats.info/nuget/TinyValidator)](https://www.nuget.org/packages/TinyValidator/) --> *Badge in progress !* |
+| Package | [![NuGet Badge](https://buildstats.info/nuget/TinyValidator)](https://www.nuget.org/packages/TinyValidator/) |
 | Code Quality  | [![CodeFactor](https://www.codefactor.io/repository/github/pbouillon/tinyvalidator/badge)](https://www.codefactor.io/repository/github/pbouillon/tinyvalidator) |
 | CI / CD | ![Build](https://github.com/pBouillon/TinyValidator/workflows/Build/badge.svg) |
 
